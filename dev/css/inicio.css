@@ -148,6 +148,14 @@ background-color: rgba(21, 20, 20, 0.7);
 backdrop-filter: blur(80px);
 }
 
+@media (max-width: 768px) {
+  /* Estilos adicionales para dispositivos móviles */
+  .navbar.scrolled {
+      background-color: rgba(21, 20, 20, 0.7); /* Cambia el color de fondo */
+      backdrop-filter: blur(40px); /* Reduce el desenfoque para dispositivos móviles */
+  }
+}
+
 a {
 text-decoration: none;
 font-family: "IBM Plex Sans", sans-serif;
