@@ -346,6 +346,7 @@ transform: scale(1.2); /* Ajusta la escala según tu preferencia */
 
 body {
   font-family: "Century Gothic", 'Lato', sans-serif;
+  overflow-x: hidden; /* Bloquea el desplazamiento horizontal */
 }
 
 a {
