@@ -1,0 +1,1075 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}   
+
+*,
+*::after,
+*::before {
+    margin: 0; 
+    padding: 0;
+    font-family: inherit;
+    box-sizing: inherit;
+}
+
+.intro {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    transition: 1s;
+}
+
+.intro img {
+    position: absolute;
+    top: 12vh; /* Ajusta el valor según tus necesidades */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.intro p {
+    color: gray;
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+
+
+.logo {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.logo-parts {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo-parts.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo-parts.fade {
+    bottom: 250px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .intro img {
+      top: 10vh;
+  }
+
+  .intro p {
+      font-size: 1.4rem;
+  }
+
+  .logo {
+      font-size: 2rem;
+  }
+
+  .logo-parts {
+      bottom: -10px;
+  }
+
+  .logo-parts.active {
+      bottom: 0;
+  }
+
+  .logo-parts.fade {
+      bottom: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro img {
+      top: 5vh;
+  }
+
+  .intro p {
+      font-size: 1.2rem;
+  }
+
+  .logo {
+      font-size: 1.8rem;
+  }
+
+  .logo-parts {
+      bottom: -5px;
+  }
+
+  .logo-parts.active {
+      bottom: 0;
+  }
+
+  .logo-parts.fade {
+      bottom: 150px;
+  }
+}
+
+.content {
+    width: 100%;
+    padding: 0%;
+    font-size: 2rem;
+}
+
+.black-space {
+  background-color: black;
+  height: 50px; /* Altura del espacio negro */
+  width: 100%; /* Ancho completo */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .black-space {
+      height: 20px; /* Altura reducida en dispositivos móviles */
+      background-color: black; /* Color de fondo diferente para dispositivos móviles */
+  }
+}
+
+
+/* Bloques adicionales */
+.module-content {
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: center; /* Para centrar verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+}
+
+
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: rgba(21, 20, 20, 0.9);
+  color: #fff;
+  padding: 10px 0;
+  text-align: right;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px; /* Cambiado a un valor específico */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0);
+  align-items: center;
+  
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Cambia esto para quitar la propiedad height */
+  padding: 0;
+  margin: 0 0 -20px 20px; /* Ajusta este valor para mover el logotipo más a la derecha */
+}
+
+.navbar-logo {
+  height: 15px; /* Ajusta el alto de la imagen aquí */
+  width: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    flex-grow: 1;
+  }
+}
+
+/* Cambia el color de fondo y el desenfoque al hacer scroll hacia abajo */
+.navbar.scrolled {
+  background-color: rgba(21, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+a {
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: 0.1s all ease-in;
+}
+
+a:hover {
+  border: 0px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 0 #525353;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-link:hover {
+  color: #a09e97;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Agrega esta línea para centrar los elementos */
+  }
+
+  .navbar-item {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para las barras dentro del botón */
+.bar {
+  background-color: #fff;
+  height: 3px;
+  margin: 6px 0;
+}
+
+/* Estilos para el botón de hamburguesa y las barras */
+.navbar-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background-color: #f8f8f8;
+  margin: 5px auto;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de "X" */
+
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Resto del código CSS para el icono de hamburguesa */
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  
+
+  .navbar-menu {
+    display: none;
+    
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    
+  }
+}
+
+.navbar-menu.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.services {
+    background-color: #000000; /* Color de fondo gris claro */
+    padding: 50px 0; /* Relleno superior e inferior */
+  }
+  
+  .services-container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Relleno izquierdo y derecho */
+  }
+  
+  .services-title {
+    text-align: center; /* Centra el título */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    margin-bottom: 50px; /* Margen inferior antes del grid */
+    background-color: #a09e97;
+    border-radius: 20px;
+  }
+  
+  .services-grid {
+    display: grid; /* Utiliza CSS Grid */
+    grid-template-columns: repeat(6, 1fr); /* 4 columnas iguales */
+    gap: 20px; /* Espacio entre los bloques */
+  }
+  
+  .services-block {
+    display: flex;
+    justify-content: center;
+  }
+  
+.services-block img {
+  width: 30%; /* Ajusta el tamaño de las imágenes al tamaño del bloque */
+  height: auto; /* Mantiene la relación de aspecto de las imágenes */
+  transition: transform 0.5s ease-in-out; /* Agrega una transición al efecto */
+}
+
+/* Aplica la transformación en hover */
+.services-block:hover img {
+  transform: scale(1.2); /* Ajusta la escala según tu preferencia */
+}
+  
+  @media (max-width: 600px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos móviles */
+      grid-auto-flow: row; /* Especifica que los elementos fluyan en filas */
+    }
+    .services-block {
+      margin-bottom: 20px; /* Espacio entre bloques en dispositivos móviles */
+    }
+  }
+
+@media (min-width: 728px) and (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tres columnas en dispositivos medianos */
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Una columna en pantallas muy pequeñas */
+    }
+}
+
+  body {
+		font-family: "Century Gothic", 'Lato', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.hero-section{
+    --background-dark: #000000;
+    --text-light: rgba(255,255,255,0.6);
+    --text-lighter: rgba(255,255,255,0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+  }
+  
+  *{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+  
+  body{
+    height: 100%;
+  }
+  
+  .hero-section{
+    align-items: flex-start;
+    background-image: linear-gradient(15deg, #000000 0%, #000000 150%);
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+  }
+  
+  .card-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+  }
+  
+  @media(min-width: 540px){
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media(min-width: 960px){
+    .card-grid{
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  }
+  
+  .card{
+    list-style: none;
+    position: relative;
+  }
+  
+  .card:before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+  }
+  
+  .card__background{
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition: 
+      filter 200ms linear,
+      transform 200ms linear;
+  }
+  
+  .card:hover .card__background{
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  .card-grid:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+  
+  .card__content{
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+  }
+  
+  .card__category{
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+  }
+  
+  .card__heading{
+    color: var(--text-lighter);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+  }
+
+/* Lunar young  */
+
+@font-face {
+  font-family: "Geist";
+  src: url("/dev/assets/fonts/GeistMonoVF.woff2") format("woff2");
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-wrapper {
+  background-image: linear-gradient(0deg, white 60%, #000000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  --wght-min: 32;
+  --wght-max: 240;
+}
+
+.text-wrapper p {
+  font-family: "Geist";
+  font-size: 128px;
+  margin: 0;
+  text-align: center;
+}
+
+.text-wrapper p span {
+  animation: breath 1.5s alternate ease-in-out infinite;
+}
+
+@keyframes breath {
+  0% {
+    font-variation-settings: "wght" var(--wght-min);
+  }
+  100% {
+    font-variation-settings: "wght" var(--wght-max);
+  }
+}
+
+/* Setup */
+
+html,
+body {
+  height: 100%;
+  background: #222222;
+  color: rgb(12, 12, 12);
+}
+
+/* SPACEART */
+.keyboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  height: 100vh;
+  background-color: #101013;
+  color: #fff;
+}
+
+.key {
+  font-size: 13vw;
+  display: inline-block;
+  letter-spacing: -1vw;
+  transition: transform 0.2s;
+}
+
+@keyframes pressDown {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.key:nth-child(1) {
+  animation: pressDown 2s infinite;
+}
+
+.key:nth-child(2) {
+  animation: pressDown 3s infinite;
+}
+
+.key:nth-child(3) {
+  animation: pressDown 4s infinite;
+}
+
+.key:nth-child(4) {
+  animation: pressDown 2.5s infinite;
+}
+
+.key:nth-child(5) {
+  animation: pressDown 2.5s infinite;
+}
+
+.key:nth-child(6) {
+  animation: pressDown 3.5s infinite;
+}
+
+.key:nth-child(7) {
+  animation: pressDown 2.2s infinite;
+}
+
+.key:nth-child(8) {
+  animation: pressDown 3.2s infinite;
+}
+
+
+/* Añade estilos solo a las tres últimas letras */
+.key:nth-last-child(1),
+.key:nth-last-child(2),
+.key:nth-last-child(3) {
+    background-image: url('../assets/img/galaxia.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    color: transparent; /* Hace que el texto sea transparente para mostrar el fondo de la imagen */
+    -webkit-background-clip: text; /* WebKit browsers (Safari, Chrome) */
+    background-clip: text;
+    display: inline-block;
+    position: relative;
+    padding: 0 12px; /* Ajusta el espaciado interior para evitar que las letras se corten */
+    margin: 0 -10px; /* Ajusta el margen para contrarrestar el espaciado interior y mantener el diseño */
+}
+
+
+
+
+
+/* Extra stuff */
+.jux-linx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+/* Agrega este bloque al final de tu archivo CSS */
+.two-grid-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.two-grid-section .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px; /* Reducido el espacio a 10px */
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 20px; /* Agregado el margen de 20px a cada lado */
+
+  /* Pantallas más grandes (por ejemplo, 1200px y más) */
+  @media screen and (min-width: 1200px) {
+    margin: 0 80px; /* Ajusta el margen para pantallas más grandes según tus preferencias */
+  }
+}
+
+.two-grid-section .image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1); /* Agregado efecto de sombra */
+  transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+}
+
+.two-grid-section .image-grid img:hover {
+  transform: translateY(-15px); /* Ajusta el valor según tu preferencia */
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2); /* Efecto de sombra aumentado al hacer hover */
+}
+
+
+.two-grid-section .content-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.two-grid-section .content-grid h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.two-grid-section .content-grid p {
+  font-size: 20px;
+  color: rgb(135, 128, 128);;
+}
+
+/* Media Query para hacerlo responsive */
+@media screen and (max-width: 768px) {
+  .two-grid-section .content-grid {
+    padding: 20px;
+    flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+    align-items: center; /* Centrar contenido en pantallas más pequeñas */
+  }
+
+  .two-grid-section .content-grid h2 {
+    font-size: 40px;
+    text-align: center; /* Centrar el texto en pantallas más pequeñas */
+  }
+
+  .two-grid-section .content-grid p {
+    font-size: 16px;
+    text-align: center; /* Centrar el texto en pantallas más pequeñas */
+  }
+}
+
+/* Agrega estas reglas de medios al final de tu archivo CSS */
+@media (min-width: 540px) {
+  .two-grid-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .two-grid-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 539px) {
+  .two-grid-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.two-grid-section .image-grid img {
+  transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
+}
+
+.two-grid-section .image-grid img:hover {
+  transform: scale(1.2);
+}
+
+/* Para desactivar el hover en dispositivos móviles */
+@media (max-width: 767px) {
+  .two-grid-section .image-grid img:hover {
+    transform: scale(1); /* Mantén el tamaño original al hacer hover en dispositivos móviles */
+  }
+}
+
+.two-grid-section .image-grid img {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.two-grid-section .image-grid img:hover {
+  transform: translateY(-15px); /* Ajusta el valor según tu preferencia */
+}
+
+
+/* Nueva sección similar a two-grid-section */
+.my-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  background: #222222;
+}
+
+.my-section .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 80px;
+  }
+}
+
+.my-section .image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+  
+}
+
+.my-section .image-grid img:hover {
+  transform: scale(1.2);
+}
+
+.my-section .content-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.my-section .content-grid h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.my-section .content-grid p {
+  font-size: 20px;
+  color: rgb(135, 128, 128);
+}
+
+@media screen and (max-width: 768px) {
+  .my-section .content-grid {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-section .content-grid h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .my-section .content-grid p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 540px) {
+  .my-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .my-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 539px) {
+  .my-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.my-section .image-grid img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.my-section .image-grid img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+  .my-section .image-grid img:hover {
+    transform: scale(1);
+  }
+}
+
+.my-section .image-grid img {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.my-section .image-grid img:hover {
+  transform: translateY(-15px);
+}
+
+
+
+
+/* ... overlay ... */
+
+.overlay-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222222; /* Color de fondo gris oscuro */
+  padding: 40px 20px; /* Ajusta el relleno según tus necesidades */
+  margin-top: 40px;
+  position: relative;
+}
+
+.overlay-image-section .image-container {
+  position: relative;
+}
+
+.overlay-image-section img {
+  max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+  height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+}
+
+.overlay-image-section img.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( 1%, -50% );
+  width: 38%; /* Ajusta el ancho de la imagen superpuesta */
+  opacity: 11; /* Ajusta la opacidad según tus necesidades */
+  transition: width 0.8s ease-in-out, opacity 0.2s ease-in-out; /* Cambio de la propiedad 'width' */
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+}
+
+
+.overlay-image-section img.overlay-image.smooth-hover {
+  transition: width 1s ease-in-out, opacity 1s ease-in-out; /* Transición más suave */
+}
+
+.overlay-image-section:hover img.overlay-image {
+  /* ... (otras propiedades) ... */
+  width: 43%; /* Ajusta el ancho máximo al hacer hover según tus necesidades */
+  opacity: 1; /* Ajusta la opacidad al hacer hover según tus necesidades */
+}
+
+.espaciador {
+  height: 90px; /* Ajusta la altura según tus necesidades */
+  background-color: #222222;
+}
+
+/* Espaciador para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .espaciador {
+    height: 30px; /* Ajusta la altura para dispositivos móviles según tus necesidades */
+    background-color: #222222;
+  }
+}
+
+
+
+
+
+/* spiral */
+
+.spiral-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #040509;
+  font-size: 62.5%;
+}
+
+.spiral-section {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #040509;
+  overflow: hidden;
+  font-size: 62.5%
+}
+
+/* The @property CSS at-rule is part of the CSS Houdini umbrella of APIs. It */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.spiral{
+display: flex;
+align-items: center;
+gap: 10px;
+position: absolute;
+color: #e0ecef;
+font-family: "sans-serif";
+}
+
+@keyframes spiral{
+0%{
+  --angle: 0deg;
+}
+100%{
+  --angle: 360deg;
+}
+}
+
+.character{
+font-size: 2.8rem;
+color: white;
+text-transform: uppercase;
+transform: translateY(calc(sin(var(--angle)) * 100px)) scale(calc(cos(var(--angle)) * 0.5 + 0.5));
+animation: spiral 4s linear infinite;
+}
+
+@media (max-width: 490px){
+.character{
+  font-size: 2.2rem
+}
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: rgba(34, 34, 34, 0.8); /* Fondo gris oscuro con opacidad */
+  color: #ffffff; /* Texto en blanco */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrar el contenido del footer */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  padding: 2%;
+}
+
+.footer a {
+  color: #ffffff; /* Color de los enlaces en el footer */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+}
+
+/* Estilos para los logotipos */
+.footer img {
+  width: 30px; /* Ajusta el tamaño según tus preferencias */
+  margin: 0 5px 5px 5px; /* Espaciado entre los logotipos y el texto (más margen en la parte superior) */
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave a la transformación */
+}
+
+/* Línea que separa los logotipos */
+.line-divider {
+  background-color: #bdbcbc; /* Color de la línea en gris oscuro */
+  height: 1px; /* Altura de la línea */
+  width: 50px; /* Ancho de la línea, ajusta según tus necesidades */
+  margin: 20px 10px; /* Espaciado alrededor de la línea */
+}
+
+/* Estilos para el texto en el footer */
+.footer p {
+  margin-top: 10px; /* Espaciado superior para el texto */
+}
+
+.footer img:hover {
+  transform: scale(1.2); /* Escala los iconos al pasar el ratón para un efecto de zoom */
+}
+
+
+/* Estilos para skills */
+
+
