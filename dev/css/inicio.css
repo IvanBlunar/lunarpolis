@@ -152,7 +152,7 @@ backdrop-filter: blur(80px);
   /* Estilos adicionales para dispositivos móviles */
   .navbar.scrolled {
       background-color: rgba(21, 20, 20, 0.7); /* Cambia el color de fondo */
-      backdrop-filter: blur(600px); /* Reduce el desenfoque para dispositivos móviles */
+      backdrop-filter: blur(2000px); /* Reduce el desenfoque para dispositivos móviles */
   }
 }
 
