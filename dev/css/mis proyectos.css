@@ -1,392 +1,392 @@
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }   
 
 
 
 .content {
-    width: 100%;
-    padding: 0%;
-    font-size: 2rem;
+  width: 100%;
+  padding: 0%;
+  font-size: 2rem;
 }
 
 .black-space {
-  background-color: black;
-  height: 60px; /* Altura del espacio negro */
-  width: 100%; /* Ancho completo */
+background-color: black;
+height: 60px; /* Altura del espacio negro */
+width: 100%; /* Ancho completo */
 }
 
 /* Estilos específicos para dispositivos móviles */
 @media screen and (max-width: 600px) {
-  .black-space {
-      height: 20px; /* Altura reducida en dispositivos móviles */
-      background-color: black; /* Color de fondo diferente para dispositivos móviles */
-  }
+.black-space {
+    height: 20px; /* Altura reducida en dispositivos móviles */
+    background-color: black; /* Color de fondo diferente para dispositivos móviles */
+}
 }
 
 
 /* Bloques adicionales */
 .module-content {
-    display: flex;
-    justify-content: center; /* Para centrar horizontalmente */
-    align-items: center; /* Para centrar verticalmente */
-    text-align: center; /* Centra el texto horizontalmente */
+  display: flex;
+  justify-content: center; /* Para centrar horizontalmente */
+  align-items: center; /* Para centrar verticalmente */
+  text-align: center; /* Centra el texto horizontalmente */
 }
 
 .black-block {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 
 /* Estilos de la barra de navegación */
 .navbar {
-  background-color: rgba(21, 20, 20, 0.9);
-  color: #fff;
-  padding: 10px 0;
-  text-align: right;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 16px; /* Cambiado a un valor específico */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-  backdrop-filter: blur(0);
-  align-items: center;
-  
+background-color: rgba(21, 20, 20, 0.9);
+color: #fff;
+padding: 10px 0;
+text-align: right;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 16px; /* Cambiado a un valor específico */
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1;
+transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+backdrop-filter: blur(0);
+align-items: center;
+
 }
 
 
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Cambia esto para quitar la propiedad height */
-  padding: 0;
-  margin: 0 0 -20px 20px; /* Ajusta este valor para mover el logotipo más a la derecha */
+display: flex;
+align-items: center;
+justify-content: flex-start; /* Cambia esto para quitar la propiedad height */
+padding: 0;
+margin: 0 0 -20px 20px; /* Ajusta este valor para mover el logotipo más a la derecha */
 }
 
 .navbar-logo {
-  height: 15px; /* Ajusta el alto de la imagen aquí */
-  width: auto;
-  margin: 0;
-  padding: 0;
-  opacity: 50%;
+height: 15px; /* Ajusta el alto de la imagen aquí */
+width: auto;
+margin: 0;
+padding: 0;
+opacity: 50%;
 }
 
 @media screen and (max-width: 768px) {
-  .navbar-brand {
-    flex-grow: 1;
-  }
+.navbar-brand {
+  flex-grow: 1;
+}
 }
 
 /* Cambia el color de fondo y el desenfoque al hacer scroll hacia abajo */
 .navbar.scrolled {
-  background-color: rgba(21, 20, 20, 0.7);
-  backdrop-filter: blur(10px);
+background-color: rgba(21, 20, 20, 0.7);
+backdrop-filter: blur(10px);
 }
 
 a {
-  text-decoration: none;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0);
-  border: 0px solid rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
-  padding: 5px 10px;
-  transition: 0.1s all ease-in;
+text-decoration: none;
+font-family: "IBM Plex Sans", sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: white;
+background-color: rgba(0, 0, 0, 0);
+border: 0px solid rgba(255, 255, 255, 0.3);
+border-radius: 2px;
+padding: 5px 10px;
+transition: 0.1s all ease-in;
 }
 
 a:hover {
-  border: 0px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0px 2px 0 #525353;
+border: 0px solid rgba(255, 255, 255, 0.4);
+box-shadow: 0px 2px 0 #525353;
 }
 
 .navbar-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .navbar-item {
-  display: inline-block;
-  margin: 0 10px;
+display: inline-block;
+margin: 0 10px;
 }
 
 .navbar-link {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease-in-out;
+text-decoration: none;
+color: #fff;
+transition: color 0.3s ease-in-out;
 }
 
 .navbar-link:hover {
-  color: #a09e97;
+color: #a09e97;
 }
 
 /* Media query para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
-  .navbar-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Agrega esta línea para centrar los elementos */
-  }
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Agrega esta línea para centrar los elementos */
+}
 
-  .navbar-item {
-    display: block;
-    margin: 10px 0;
-  }
+.navbar-item {
+  display: block;
+  margin: 10px 0;
+}
 }
 
 .navbar-toggle {
-  display: none;
+display: none;
 }
 
 .navbar-button {
-  background-color: rgba(0, 0, 0, 0);
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+background-color: rgba(0, 0, 0, 0);
+color: #fff;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
 }
 
 /* Estilos para las barras dentro del botón */
 .bar {
-  background-color: #fff;
-  height: 3px;
-  margin: 6px 0;
+background-color: #fff;
+height: 3px;
+margin: 6px 0;
 }
 
 /* Estilos para el botón de hamburguesa y las barras */
 .navbar-toggle .bar {
-  display: block;
-  width: 25px;
-  height: 1px;
-  background-color: #f8f8f8;
-  margin: 5px auto;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+display: block;
+width: 25px;
+height: 1px;
+background-color: #f8f8f8;
+margin: 5px auto;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
 }
 
 /* Estilos para el botón de "X" */
 
 .navbar-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+transform: rotate(45deg) translate(5px, 5px);
 }
 
 .navbar-toggle.active .bar:nth-child(2) {
-  opacity: 0;
+opacity: 0;
 }
 
 .navbar-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px);
+transform: rotate(-45deg) translate(4px, -4px);
 }
 
 /* Resto del código CSS para el icono de hamburguesa */
 @media screen and (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
+.navbar-toggle {
+  display: block;
+}
 
+
+
+.navbar-menu {
+  display: none;
   
-
-  .navbar-menu {
-    display: none;
-    
-  }
-
-  .navbar-menu.active {
-    display: flex;
-    
-  }
 }
 
 .navbar-menu.active {
   display: flex;
-  animation: fadeIn 0.3s ease-in-out forwards;
+  
+}
+}
+
+.navbar-menu.active {
+display: flex;
+animation: fadeIn 0.3s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+0% {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
 }
 
- 
-  *{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html{
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-  }
-  
-  body{
-    height: 100%;
-  }
-  
-  
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+body{
+  height: 100%;
+}
+
+
 
 
 /* Setup */
 
 html,
 body {
-  height: 100%;
-  background: #222222;
-  color: rgb(12, 12, 12);
+height: 100%;
+background: #222222;
+color: rgb(12, 12, 12);
 }
 
 
 /* Agrega este bloque al final de tu archivo CSS */
 .two-grid-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-  
-  
-  
+display: flex;
+justify-content: center;
+margin-top: 80px;
+
+
+
 }
 
 
 
 .two-grid-section .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  border-radius: 15px;
-  overflow: hidden;
-  margin: 0 100px;
-  padding: 10px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+border-radius: 15px;
+overflow: hidden;
+margin: 0 100px;
+padding: 10px;
 
-  
 
-  
-  /* Configuración de la animación de línea infinita */
-  animation: infiniteLine 5s linear infinite;
-  position: relative;
+
+
+/* Configuración de la animación de línea infinita */
+animation: infiniteLine 5s linear infinite;
+position: relative;
 }
 /* Media query para pantallas menores a 1080px */
 @media (max-width: 1080px) {
-  .two-grid-section .grid-container {
-    margin: 0 35px; /* Ajusta el valor del margen para pantallas más pequeñas */
-  }
+.two-grid-section .grid-container {
+  margin: 0 35px; /* Ajusta el valor del margen para pantallas más pequeñas */
+}
 }
 
 
 
 
 @keyframes infiniteLine {
-  0% {
-    box-shadow: 20px 20px 30px rgba(50, 50, 50, 0.8);
-  }
-  25% {
-    box-shadow: 80px 20px 30px rgba(30, 30, 30, 0.8);
-  }
-  50% {
-    box-shadow: 140px 20px 30px rgba(10, 10, 10, 0.8);
-  }
-  75% {
-    box-shadow: 80px 20px 30px rgba(30, 30, 30, 0.8);
-  }
-  100% {
-    box-shadow: 20px 20px 30px rgba(50, 50, 50, 0.8);
-  }
+0% {
+  box-shadow: 20px 20px 30px rgba(50, 50, 50, 0.8);
+}
+25% {
+  box-shadow: 80px 20px 30px rgba(30, 30, 30, 0.8);
+}
+50% {
+  box-shadow: 140px 20px 30px rgba(10, 10, 10, 0.8);
+}
+75% {
+  box-shadow: 80px 20px 30px rgba(30, 30, 30, 0.8);
+}
+100% {
+  box-shadow: 20px 20px 30px rgba(50, 50, 50, 0.8);
+}
 }
 
 
 
 .two-grid-section .image-grid {
-  position: relative;
+position: relative;
 }
 
 .two-grid-section .overlay-image2 {
-  position: absolute;
-  top: 0;
-  left: 30%; /* Centra inicialmente la imagen superpuesta en el 50% del contenedor principal (image-grid) */
-  transform: translateX(-50%); /* Ajusta la posición para centrarla correctamente */
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  opacity: 0.9;
-  transition: opacity 0.5s ease-in-out;
+position: absolute;
+top: 0;
+left: 30%; /* Centra inicialmente la imagen superpuesta en el 50% del contenedor principal (image-grid) */
+transform: translateX(-50%); /* Ajusta la posición para centrarla correctamente */
+width: 100%;
+height: 100%;
+border-radius: 8px;
+opacity: 0.9;
+transition: opacity 0.5s ease-in-out;
 }
 
 
 
 /* Ajusta la opacidad al hacer hover */
 .two-grid-section .image-grid:hover .overlay-image2 {
-  opacity: 1;
+opacity: 1;
 }
 
 
 
 .two-grid-section .image-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  
-  transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+width: 100%;
+height: auto;
+border-radius: 8px;
+
+transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
+filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
 }
 
 .two-grid-section .image-grid img:hover {
-  transform: translateY(-15px); /* Ajusta el valor según tu preferencia */
-  
+transform: translateY(-15px); /* Ajusta el valor según tu preferencia */
+
 }
 
 
 .two-grid-section .content-grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 50px;
-  
-  
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 50px;
+
+
 }
 
 .two-grid-section .content-grid h2 {
-  font-size: 50px;
-  margin-bottom: 10px;
-  color: white;
+font-size: 50px;
+margin-bottom: 10px;
+color: white;
 }
 
 .two-grid-section .content-grid p {
-  font-size: 20px;
-  color: rgb(135, 128, 128);;
+font-size: 20px;
+color: rgb(135, 128, 128);;
 }
 
 /* Media Query para hacerlo responsive */
 @media screen and (max-width: 768px) {
-  .two-grid-section .content-grid {
-    padding: 20px;
-    flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
-    align-items: center; /* Centrar contenido en pantallas más pequeñas */
-  }
+.two-grid-section .content-grid {
+  padding: 20px;
+  flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+  align-items: center; /* Centrar contenido en pantallas más pequeñas */
+}
 
-  .two-grid-section .content-grid h2 {
-    font-size: 40px;
-    text-align: center; /* Centrar el texto en pantallas más pequeñas */
-  }
+.two-grid-section .content-grid h2 {
+  font-size: 40px;
+  text-align: center; /* Centrar el texto en pantallas más pequeñas */
+}
 
-  .two-grid-section .content-grid p {
-    font-size: 16px;
-    text-align: center; /* Centrar el texto en pantallas más pequeñas */
-  }
+.two-grid-section .content-grid p {
+  font-size: 16px;
+  text-align: center; /* Centrar el texto en pantallas más pequeñas */
+}
 }
 
 
@@ -394,27 +394,27 @@ body {
 
 
 .icon-links {
-  margin-top: 40px;
-  position: relative;
-  z-index: 0; /* Valor alto para asegurar que esté encima de otros elementos */
-  display: flex; /* Usar flexbox */
-  align-items: center; /* Centrar verticalmente */
+margin-top: 40px;
+position: relative;
+z-index: 0; /* Valor alto para asegurar que esté encima de otros elementos */
+display: flex; /* Usar flexbox */
+align-items: center; /* Centrar verticalmente */
 }
 
 .icon-links a {
-  margin-right: 3px;
-  opacity: 0.7; /* Opacidad inicial */
-  transition: opacity 0.3s ease; /* Transición suave de 0.3 segundos */
+margin-right: 3px;
+opacity: 0.7; /* Opacidad inicial */
+transition: opacity 0.3s ease; /* Transición suave de 0.3 segundos */
 }
 
 /* Alineación a la izquierda */
 .icon-links a:first-child {
-  margin-left: 0; /* Eliminar el margen izquierdo del primer elemento */
+margin-left: 0; /* Eliminar el margen izquierdo del primer elemento */
 }
 
 
 .icon-links a:hover {
-  opacity: 1; /* Opacidad al pasar el ratón */
+opacity: 1; /* Opacidad al pasar el ratón */
 }
 
 
@@ -422,107 +422,108 @@ body {
 
 /* Agrega estas reglas de medios al final de tu archivo CSS */
 @media (min-width: 540px) {
-  .two-grid-section .grid-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.two-grid-section .grid-container {
+  grid-template-columns: repeat(1, 1fr);
+}
 }
 
 @media (min-width: 960px) {
-  .two-grid-section .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.two-grid-section .grid-container {
+  grid-template-columns: repeat(2, 1fr);
+}
 }
 
 @media (max-width: 539px) {
-  .two-grid-section .grid-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.two-grid-section .grid-container {
+  grid-template-columns: repeat(1, 1fr);
+}
 }
 
 .two-grid-section .image-grid img {
-  transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
+transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
 }
 
 .two-grid-section .image-grid img:hover {
-  transform: scale(1.2);
+transform: scale(1.2);
 }
 
 /* Para desactivar el hover en dispositivos móviles */
 @media (max-width: 767px) {
-  .two-grid-section .image-grid img:hover {
-    transform: scale(1); /* Mantén el tamaño original al hacer hover en dispositivos móviles */
-  }
+.two-grid-section .image-grid img:hover {
+  transform: scale(1); /* Mantén el tamaño original al hacer hover en dispositivos móviles */
+}
 }
 
 .two-grid-section .image-grid img {
-  transform: translateY(0);
-  transition: transform 0.5s ease-in-out;
+transform: translateY(0);
+transition: transform 0.5s ease-in-out;
 }
 
 .two-grid-section .image-grid img:hover {
-  transform: translateY(-15px); /* Ajusta el valor según tu preferencia */
+transform: translateY(-15px); /* Ajusta el valor según tu preferencia */
 }
 
 
 
 .espaciador {
-  height: 90px; /* Ajusta la altura según tus necesidades */
-  background-color: #222222;
+height: 90px; /* Ajusta la altura según tus necesidades */
+background-color: #222222;
 }
 
 /* Espaciador para dispositivos móviles */
 @media screen and (max-width: 767px) {
-  .espaciador {
-    height: 30px; /* Ajusta la altura para dispositivos móviles según tus necesidades */
-    background-color: #222222;
-  }
+.espaciador {
+  height: 30px; /* Ajusta la altura para dispositivos móviles según tus necesidades */
+  background-color: #222222;
+}
 }
 
 
 
 /* Estilos para el footer */
 .footer {
-  background-color: rgba(34, 34, 34, 0.8); /* Fondo gris oscuro con opacidad */
-  color: #ffffff; /* Texto en blanco */
-  padding: 20px; /* Espaciado interno */
-  text-align: center; /* Centrar el contenido del footer */
-  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
-  background-position: center; /* Centra la imagen de fondo */
-  padding: 2%;
+background-color: rgba(34, 34, 34, 0.8); /* Fondo gris oscuro con opacidad */
+color: #ffffff; /* Texto en blanco */
+padding: 20px; /* Espaciado interno */
+text-align: center; /* Centrar el contenido del footer */
+background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+background-position: center; /* Centra la imagen de fondo */
+padding: 2%;
 }
 
 .footer a {
-  color: #ffffff; /* Color de los enlaces en el footer */
-  text-decoration: none;
+color: #ffffff; /* Color de los enlaces en el footer */
+text-decoration: none;
 }
 
 .footer a:hover {
-  text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
 }
 
 /* Estilos para los logotipos */
 .footer img {
-  width: 30px; /* Ajusta el tamaño según tus preferencias */
-  margin: 0 5px 5px 5px; /* Espaciado entre los logotipos y el texto (más margen en la parte superior) */
-  transition: transform 0.3s ease-in-out; /* Agrega una transición suave a la transformación */
+width: 30px; /* Ajusta el tamaño según tus preferencias */
+margin: 0 5px 5px 5px; /* Espaciado entre los logotipos y el texto (más margen en la parte superior) */
+transition: transform 0.3s ease-in-out; /* Agrega una transición suave a la transformación */
 }
 
 /* Línea que separa los logotipos */
 .line-divider {
-  background-color: #bdbcbc; /* Color de la línea en gris oscuro */
-  height: 1px; /* Altura de la línea */
-  width: 50px; /* Ancho de la línea, ajusta según tus necesidades */
-  margin: 20px 10px; /* Espaciado alrededor de la línea */
+background-color: #bdbcbc; /* Color de la línea en gris oscuro */
+height: 1px; /* Altura de la línea */
+width: 50px; /* Ancho de la línea, ajusta según tus necesidades */
+margin: 20px 10px; /* Espaciado alrededor de la línea */
 }
 
 /* Estilos para el texto en el footer */
 .footer p {
-  margin-top: 10px; /* Espaciado superior para el texto */
+margin-top: 10px; /* Espaciado superior para el texto */
 }
 
 .footer img:hover {
-  transform: scale(1.2); /* Escala los iconos al pasar el ratón para un efecto de zoom */
+transform: scale(1.2); /* Escala los iconos al pasar el ratón para un efecto de zoom */
 }
+
 
 
 
