@@ -453,6 +453,16 @@ body {
   padding: 2%;
 }
 
+/* Estilos para el footer en dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 20px; /* Espaciado en la parte superior para dispositivos móviles */
+    padding-right: 2%; /* Mantener el espaciado en los otros lados */
+    padding-bottom: 20px;
+    padding-left: 2%;
+  }
+}
+
 .footer a {
   color: #ffffff; /* Color de los enlaces en el footer */
   text-decoration: none;
