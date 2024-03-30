@@ -283,7 +283,7 @@ position: relative;
 /* Media query para pantallas menores a 1080px */
 @media (max-width: 1080px) {
 .two-grid-section .grid-container {
-  margin: 0 35px; /* Ajusta el valor del margen para pantallas más pequeñas */
+  margin: 0 10px; /* Ajusta el valor del margen para pantallas más pequeñas */
 }
 }
 
