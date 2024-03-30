@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-x: hidden; /* Bloquea el desplazamiento horizontal */
 }   
 
 *,
@@ -346,7 +347,6 @@ transform: scale(1.2); /* Ajusta la escala según tu preferencia */
 
 body {
   font-family: "Century Gothic", 'Lato', sans-serif;
-  overflow-x: hidden; /* Bloquea el desplazamiento horizontal */
 }
 
 a {
