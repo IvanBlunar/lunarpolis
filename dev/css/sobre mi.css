@@ -84,7 +84,7 @@ html {
 
 /* Cambia el color de fondo y el desenfoque al hacer scroll hacia abajo */
 .navbar.scrolled {
-  background-color: rgba(21, 20, 20, 0.7);
+  background-color: rgba(21, 20, 20, 0.892);
   backdrop-filter: blur(80px);
 }
 
