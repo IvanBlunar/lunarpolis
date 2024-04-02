@@ -148,6 +148,15 @@ background-color: rgba(21, 20, 20, 0.7);
 backdrop-filter: blur(80px);
 }
 
+/* Cambia el color de fondo y el desenfoque al hacer scroll hacia abajo */
+@media (max-width: 768px) {
+  .navbar.scrolled {
+    background-color: rgba(21, 20, 20, 0.7);
+    backdrop-filter: blur(80px);
+  }
+}
+
+
 
 a {
 text-decoration: none;
