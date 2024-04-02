@@ -152,7 +152,7 @@ backdrop-filter: blur(80px);
 @media (max-width: 768px) {
   .navbar.scrolled {
     background-color: rgba(21, 20, 20, 0.7);
-    backdrop-filter: blur(80px);
+    backdrop-filter: blur(81px);
   }
 }
 
