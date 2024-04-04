@@ -689,6 +689,7 @@ body {
   /* Pantallas más grandes (por ejemplo, 1200px y más) */
   @media screen and (min-width: 1200px) {
     margin: 0 80px; /* Ajusta el margen para pantallas más grandes según tus preferencias */
+    max-width: 1920px;
   }
 }
 
@@ -806,6 +807,7 @@ body {
 
   @media screen and (min-width: 1200px) {
     margin: 0 80px;
+    max-width: 1920px;
   }
 }
 
