@@ -270,6 +270,7 @@ body {
 
   @media screen and (min-width: 1200px) {
     margin: 0 80px;
+    max-width: 1920px;
   }
 }
 
@@ -539,6 +540,7 @@ body {
   border-radius: 10px;
   transition: background-color 0.3s ease;
   box-shadow: #171616;
+  max-width: 145px;
 }
 
 
