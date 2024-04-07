@@ -1,0 +1,568 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}   
+
+
+
+.content {
+    width: 100%;
+    padding: 0%;
+    font-size: 2rem;
+}
+
+.black-space {
+  background-color: black;
+  height: 60px; /* Altura del espacio negro */
+  width: 100%; /* Ancho completo */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .black-space {
+      height: 20px; /* Altura reducida en dispositivos móviles */
+      background-color: black; /* Color de fondo diferente para dispositivos móviles */
+  }
+}
+
+
+/* Bloques adicionales */
+.module-content {
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente */
+    align-items: center; /* Para centrar verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+}
+
+
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: rgba(21, 20, 20, 0.9);
+  color: #fff;
+  padding: 10px 0;
+  text-align: right;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px; /* Cambiado a un valor específico */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0);
+  align-items: center;
+  
+}
+
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Cambia esto para quitar la propiedad height */
+  padding: 0;
+  margin: 0 0 -20px 20px; /* Ajusta este valor para mover el logotipo más a la derecha */
+}
+
+.navbar-logo {
+  height: 15px; /* Ajusta el alto de la imagen aquí */
+  width: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    flex-grow: 1;
+  }
+}
+
+/* Cambia el color de fondo y el desenfoque al hacer scroll hacia abajo */
+.navbar.scrolled {
+  background-color: rgba(21, 20, 20, 0.7);
+  backdrop-filter: blur(80px);
+}
+
+a {
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  padding: 5px 10px;
+  transition: 0.1s all ease-in;
+}
+
+a:hover {
+  border: 0px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 0 #525353;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-link:hover {
+  color: #a09e97;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Agrega esta línea para centrar los elementos */
+  }
+
+  .navbar-item {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar-button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Estilos para las barras dentro del botón */
+.bar {
+  background-color: #fff;
+  height: 3px;
+  margin: 6px 0;
+}
+
+/* Estilos para el botón de hamburguesa y las barras */
+.navbar-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 1px;
+  background-color: #f8f8f8;
+  margin: 5px auto;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de "X" */
+
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Resto del código CSS para el icono de hamburguesa */
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  
+
+  .navbar-menu {
+    display: none;
+    
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    
+  }
+}
+
+.navbar-menu.active {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ 
+  *{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+  
+  body{
+    height: 100%;
+  }
+  
+  
+
+
+/* Setup */
+
+html,
+body {
+  height: 100%;
+  background: #222222;
+  color: rgb(12, 12, 12);
+}
+
+
+/* Nueva sección similar a two-grid-section */
+.my-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  background: #222222;
+}
+
+.my-section .grid-container {
+  display: grid;
+  gap: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 20px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 80px;
+    max-width: 1920px;
+  }
+}
+
+
+
+@media (max-width: 768px) { /* Estilo para pantallas con un ancho máximo de 768px (dispositivos móviles) */
+  .my-section .image-grid {
+    /* Utilizando flexbox para centrar la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Establecer la altura del contenedor para que ocupe toda la pantalla */
+  }
+
+  .my-section .image-grid img {
+    /* Eliminar propiedades de posición en dispositivos móviles */
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: auto; /* Esto centrará horizontalmente la imagen */
+  }
+}
+
+
+
+
+.my-section .image-grid img:hover {
+  transform: scale(1.2);
+}
+
+.my-section .content-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  margin: 0 300px;
+  max-width: 1920px;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 1200px) {
+  .my-section .content-grid {
+      margin: 0; /* Quita el margen en dispositivos móviles */
+      padding: 50px;
+  }
+}
+
+
+.my-section .content-grid h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.my-section .content-grid h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.my-section .content-grid p {
+  font-size: 20px;
+  color: rgb(189, 187, 187);
+}
+
+@media screen and (max-width: 768px) {
+  .my-section .content-grid {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-section .content-grid h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .my-section .content-grid p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0 20px;
+    align-content: center;
+  }
+}
+
+@media (min-width: 540px) {
+  .my-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .my-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 539px) {
+  .my-section .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.my-section .image-grid img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.my-section .image-grid img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 767px) {
+  .my-section .image-grid img:hover {
+    transform: scale(1);
+  }
+}
+
+.my-section .image-grid img {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.my-section .image-grid img:hover {
+  transform: translateY(-15px);
+}
+
+@media (max-width: 768px) {
+  .my-section .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .my-section .content-grid {
+    order: 1;
+  }
+
+  .my-section .image-grid {
+    order: 2;
+    margin-top: 20px;
+    align-self: center; /* Centrar la imagen horizontalmente */
+  }
+
+  .my-section .content-grid p {
+    margin-bottom: 0; /* Eliminar el margen inferior del párrafo */
+  }
+}
+
+
+
+
+.espaciador {
+  height: 90px; /* Ajusta la altura según tus necesidades */
+  background-color: #222222;
+}
+
+/* Espaciador para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .espaciador {
+    height: 30px; /* Ajusta la altura para dispositivos móviles según tus necesidades */
+    background-color: #222222;
+  }
+}
+
+
+
+/* Estilos para el footer */
+.footer {
+  background-color: rgba(34, 34, 34, 0.8); /* Fondo gris oscuro con opacidad */
+  color: #ffffff; /* Texto en blanco */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrar el contenido del footer */
+  background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  padding: 2%;
+}
+
+/* Estilos para el footer en dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 20px; /* Espaciado en la parte superior para dispositivos móviles */
+    padding-right: 2%; /* Mantener el espaciado en los otros lados */
+    padding-bottom: 20px;
+    padding-left: 2%;
+  }
+}
+
+.footer a {
+  color: #ffffff; /* Color de los enlaces en el footer */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+}
+
+/* Estilos para los logotipos */
+.footer img {
+  width: 30px; /* Ajusta el tamaño según tus preferencias */
+  margin: 0 5px 5px 5px; /* Espaciado entre los logotipos y el texto (más margen en la parte superior) */
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave a la transformación */
+}
+
+/* Línea que separa los logotipos */
+.line-divider {
+  background-color: #bdbcbc; /* Color de la línea en gris oscuro */
+  height: 1px; /* Altura de la línea */
+  width: 50px; /* Ancho de la línea, ajusta según tus necesidades */
+  margin: 20px 10px; /* Espaciado alrededor de la línea */
+}
+
+/* Estilos para el texto en el footer */
+.footer p {
+  margin-top: 10px; /* Espaciado superior para el texto */
+}
+
+.footer img:hover {
+  transform: scale(1.2); /* Escala los iconos al pasar el ratón para un efecto de zoom */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.card {
+  background-color: rgba(23, 22, 22, 0.8); /* Cambiar el último valor (0.8) para ajustar la transparencia */
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+  color: rgb(135, 128, 128);
+  transition: all 0.5s ease-in-out; /* Transición suave */
+}
+
+
+.card:hover {
+  background-color: #272626; /* Cambio de color al hacer hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Cambio de sombra */
+  transform: translateY(-4px); /* Cambio de posición */
+}
+
+
+.card h2 {
+  color: #f0a500; /* Color del texto para h2 en la tarjeta */
+}
+
+.card:nth-child(2) h2 {
+  color: #f0a500; /* Color del texto para h2 en la segunda tarjeta */
+}
+
+.btn-descargar {
+  display: inline-block;
+  background-color: #434445;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  box-shadow: #171616;
+  max-width: 145px;
+}
+
+
+
+.btn-descargar:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: calc(100% - 40px); /* Ancho del 100% del contenedor menos el margen */
+    margin: 0 0 20px 0; /* Ajuste de margen con margen inferior */
+  }
+}
+
+
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #2e2d2d; /* Color gris */
+  width: 70%; /* Ancho al 50% */
+  margin: 20px auto; /* Margen superior e inferior automático y centrado horizontalmente */
+}
+
+
+
