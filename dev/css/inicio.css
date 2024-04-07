@@ -295,6 +295,13 @@ animation: fadeIn 0.3s ease-in-out forwards;
   padding: 0 20px; /* Relleno izquierdo y derecho */
 }
 
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .services-container {
+      margin: 0 auto; /* Ajusta el margen para dispositivos móviles */
+  }
+}
+
 .services-title {
   text-align: center; /* Centra el título */
   font-size: 2.5rem; /* Tamaño de fuente grande */

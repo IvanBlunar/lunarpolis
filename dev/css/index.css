@@ -348,6 +348,13 @@ a:hover {
     margin: 0 80px; /* Centra el contenedor */
     padding: 0 20px; /* Relleno izquierdo y derecho */
   }
+
+  /* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .services-container {
+      margin: 0 auto; /* Ajusta el margen para dispositivos móviles */
+  }
+}
   
   .services-title {
     text-align: center; /* Centra el título */
