@@ -500,6 +500,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100%;
+margin: 0 80px;
+max-width: 1920px;
 }
 
 .text-wrapper {
