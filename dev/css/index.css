@@ -457,6 +457,13 @@ a {
     width: 100%;
     margin: 0 80px
   }
+
+  /* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .card-grid {
+      margin: 0; /* Elimina el margen en dispositivos móviles */
+  }
+}
   
   @media(min-width: 540px){
     .card-grid{
