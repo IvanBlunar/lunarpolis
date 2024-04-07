@@ -991,6 +991,14 @@ body {
   background-color: #000000;
   }
 
+  /* Eliminar el espacio en dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .spacer {
+    height: 0;
+    display: none; /* Ocultar el espacio en dispositivos móviles */
+  }
+}
+
 
 
 
