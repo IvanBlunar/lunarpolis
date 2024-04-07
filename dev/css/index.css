@@ -970,6 +970,11 @@ body {
   background-color: #222222;
 }
 
+.spacer {
+  height: 90px; /* Ajusta la altura según tus necesidades */
+  background-color: #000000;
+  }
+
 /* Espaciador para dispositivos móviles */
 @media screen and (max-width: 767px) {
   .espaciador {
