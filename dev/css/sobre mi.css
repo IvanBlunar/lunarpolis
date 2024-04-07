@@ -508,7 +508,7 @@ body {
 .card {
   background-color: rgba(23, 22, 22, 0.8); /* Cambiar el último valor (0.8) para ajustar la transparencia */
   border-radius: 30px;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   margin: 30px;
   color: rgb(135, 128, 128);
