@@ -201,7 +201,6 @@ html {
 .navbar.scrolled {
   background-color: rgba(21, 20, 20, 0.7);
   --globalnav-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
 }
 
 a {
