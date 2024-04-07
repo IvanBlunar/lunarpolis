@@ -200,7 +200,6 @@ html {
 /* Cambia el color de fondo y el desenfoque al hacer scroll hacia abajo */
 .navbar.scrolled {
   background-color: rgba(21, 20, 20, 0.7);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 
