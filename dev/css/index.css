@@ -554,9 +554,16 @@ a {
 
 .text-wrapper p {
   font-family: "Geist";
-  font-size: 128px;
+  font-size: 170px;
   margin: 0;
   text-align: center;
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .text-wrapper p {
+      font-size: 115px; /* Tamaño de fuente reducido para dispositivos móviles */
+  }
 }
 
 .text-wrapper p span {
