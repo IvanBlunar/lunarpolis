@@ -345,7 +345,7 @@ a:hover {
   
   .services-container {
     max-width: 1920px; /* Ancho máximo del contenedor */
-    margin: 0 80px; /* Centra el contenedor */
+    margin: auto; /* Centra el contenedor */
     padding: 0 20px; /* Relleno izquierdo y derecho */
   }
 
@@ -554,7 +554,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin: 0 80px;
+  margin: auto;
   max-width: 1920px;
 }
 
