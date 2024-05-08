@@ -542,6 +542,7 @@ body {
   transition: background-color 0.3s ease;
   box-shadow: #171616;
   max-width: 145px;
+  margin-top: 20px;
 }
 
 
