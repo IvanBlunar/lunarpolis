@@ -324,6 +324,7 @@ a:hover {
 .navbar-menu.active {
   display: flex;
   animation: fadeIn 0.3s ease-in-out forwards;
+  height: 768px;
 }
 
 @keyframes fadeIn {
