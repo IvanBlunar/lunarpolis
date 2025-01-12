@@ -116,6 +116,8 @@ z-index: 1;
 transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 backdrop-filter: blur(0);
 align-items: center;
+background-color: rgba(21, 20, 20, 0.7);
+backdrop-filter: saturate(180%) blur(20px);
 
 }
 
@@ -200,6 +202,11 @@ color: #a09e97;
   display: block;
   margin: 10px 0;
 }
+
+ a{
+    font-size: 50px;
+  }
+
 }
 
 .navbar-toggle {
