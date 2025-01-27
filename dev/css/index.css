@@ -726,7 +726,8 @@ body {
   border-radius: 8px;
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1); /* Agregado efecto de sombra */
   transition: transform 0.5s ease-in-out; /* Ajusta la duración y la función de temporización según tu preferencia */
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8));
+  mask-image: linear-gradient(black 30%, transparent);
 }
 
 .two-grid-section .image-grid img:hover {
@@ -844,7 +845,8 @@ body {
   border-radius: 8px;
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease-in-out;
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8))
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, .8));
+  mask-image: linear-gradient(black 80%, transparent);
   
 }
 
