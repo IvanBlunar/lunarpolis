@@ -336,13 +336,13 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  
 }
 
 
 
 .my-section .content-grid h2 {
   font-size: 70px;
-  margin-bottom: 10px;
   color: white;
 }
 
@@ -356,6 +356,7 @@ body {
     padding: 20px;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
   }
 
   .my-section .content-grid h2 {
