@@ -242,7 +242,8 @@ a:hover {
 }
 
 .navbar-link:hover {
-  color: #a09e97;
+  color: #b96505;
+  transform: scale(1.1); /* Aumenta el tamaño de la letra */
 }
 
 /* Media query para pantallas más pequeñas */
@@ -309,6 +310,10 @@ a:hover {
 @media screen and (max-width: 768px) {
   .navbar-toggle {
     display: block;
+  }
+
+  a {
+    font-size: 1.6rem; 
   }
 
   

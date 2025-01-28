@@ -127,7 +127,7 @@ a:hover {
 }
 
 .navbar-link:hover {
-  color: #a09e97;
+  color: #b96505;
 }
 
 /* Media query para pantallas más pequeñas */
@@ -144,6 +144,9 @@ a:hover {
     margin: 10px 0;
   }
   
+  a {
+    font-size: 1.6rem; 
+  }
 
 }
 
@@ -531,11 +534,11 @@ body {
 
 
 .card h2 {
-  color: #f0a500; /* Color del texto para h2 en la tarjeta */
+  color: #b96505;; /* Color del texto para h2 en la tarjeta */
 }
 
 .card:nth-child(2) h2 {
-  color: #f0a500; /* Color del texto para h2 en la segunda tarjeta */
+  color: #b96505;; /* Color del texto para h2 en la segunda tarjeta */
 }
 
 .btn-descargar {

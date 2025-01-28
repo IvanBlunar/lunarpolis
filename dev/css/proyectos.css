@@ -126,7 +126,7 @@ transition: color 0.3s ease-in-out;
 }
 
 .navbar-link:hover {
-color: #a09e97;
+color: #b96505;
 }
 
 /* Media query para pantallas más pequeñas */
@@ -141,6 +141,9 @@ color: #a09e97;
 .navbar-item {
   display: block;
   margin: 10px 0;
+}
+a {
+  font-size: 1.6rem; 
 }
 
 
