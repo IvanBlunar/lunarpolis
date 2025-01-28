@@ -196,6 +196,7 @@ color: #b96505;
   flex-direction: column;
   align-items: center;
   justify-content: center; /* Agrega esta línea para centrar los elementos */
+  margin-bottom: 100%;
 }
 
 .navbar-item {
