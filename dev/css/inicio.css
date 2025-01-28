@@ -309,7 +309,6 @@ height: 768px;
 .services-title {
   text-align: center; /* Centra el título */
   font-size: 2.5rem; /* Tamaño de fuente grande */
-  margin-bottom: 50px; /* Margen inferior antes del grid */
   background-color: #a09e97;
   border-radius: 20px;
 }
@@ -318,6 +317,7 @@ height: 768px;
   display: grid; /* Utiliza CSS Grid */
   grid-template-columns: repeat(6, 1fr); /* 4 columnas iguales */
   gap: 20px; /* Espacio entre los bloques */
+  margin-top: 80px;
 }
 
 .services-block {
