@@ -138,6 +138,7 @@ a:hover {
     align-items: center;
     justify-content: center; /* Agrega esta línea para centrar los elementos */
     margin-bottom: 100%;
+    margin-top: -20px;
   }
 
   .navbar-item {
