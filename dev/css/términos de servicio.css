@@ -582,3 +582,9 @@ body {
 
 
 
+/* Cuando la pantalla sea mayor de 768px, ocultamos el menú si tiene la clase active */
+@media (min-width: 768px) {
+  .navbar-menu.active {
+      display: none;  /* Puedes usar display: none o alguna otra técnica como visibility: hidden */
+  }
+}

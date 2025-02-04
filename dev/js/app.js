@@ -125,3 +125,17 @@ if(isFirefox){
 
 
 
+// Función para quitar la clase 'active' en pantallas grandes
+function removeActiveClass() {
+  const navbarMenu = document.querySelector('.navbar-menu');
+  
+  if (window.innerWidth > 768) {
+      navbarMenu.classList.remove('active');
+  }
+}
+
+// Llamar a la función al cargar la página
+window.addEventListener('load', removeActiveClass);
+
+// Llamar a la función cuando la ventana cambie de tamaño
+window.addEventListener('resize', removeActiveClass);
