@@ -416,6 +416,11 @@ display: flex; /* Usar flexbox */
 align-items: center; /* Centrar verticalmente */
 }
 
+.icon-links img {
+max-height: 40px;
+width: auto;
+}
+
 .icon-links a {
 margin-right: 3px;
 opacity: 0.7; /* Opacidad inicial */
