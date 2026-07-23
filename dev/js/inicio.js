@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 /*spiral*/
 
 let isFirefox = typeof InstallTrigger !== 'undefined';
-const words = "Ivan.Designer";
+const words = "Ivan Developer";
 
 let ANGLE = 360;
 const ANIMATION_DURATION = 4000;
